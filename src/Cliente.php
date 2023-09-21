@@ -4,5 +4,9 @@ class Cliente{
     public string $email;
     public string $senha;
     public array $telefones;
+    
+    //métodos
+    public function exibirDados(): void{
+        
+    }
 }
-
