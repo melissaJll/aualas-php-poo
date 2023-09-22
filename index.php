@@ -11,51 +11,15 @@
 
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Acesso as propriedades</li>
-        <li>Atribuição e leitura de dados</li>
-        <li>Chamada de método</li>
-        <li>Uso do <code> this</code> para acessar recursos dentro da propria classe</li>
+        <li>Método construtor com atribuição obrigatória de parametros/propriedades do objeto</li>
+        <li>Uso de <code>$this</code> para acesso às propriedades dentro do objeto</li>
     </ul>
 
 <?php require_once "src/Cliente.php";
-//criar instancia de objetos
-$clienteA = new Cliente;
-$clienteB = new Cliente;
-
-//Acesso e atribuição
-//equivalente ao . de acesso
-$clienteA->nome = "Hudson";
-$clienteB->nome = "Hannah";
-$clienteA->telefones = ["96262-8886","11-3476-3516"];
-$clienteA->email = "hannah@email.com";
-$clienteA->senha = password_hash("123abc", PASSWORD_DEFAULT);
-
-
-
+$ClienteA = new Cliente("Ana", "anaB@email.com");
+$ClienteB = new Cliente("Ozzy", "ozzyy@email.com");
 ?>
-<hr>
-<h2>Dados do objeto(acesso e leitura)</h2>
-<h3><?=$clienteA->nome?></h3>
-<h3><?=$clienteA->email?></h3>
 
-<!-- Telefones -->
-<h3><?=$clienteA->telefones[1]?></h3>
-<h3><?=$clienteA->telefones[0]?></h3> 
-<!-- ou -->
-<h3><?=implode(", ", $clienteA->telefones)?></h3>
-<!-- ou -->
-<ul>
-    <?php foreach($clienteA->telefones as $telefone){?>        
-            <li><?=$telefone?></li>
-    <?php } ?>
-</ul>
-
-<h2>acessando os dados atraves de um método</h2>
-<?=$clienteA->exibirDados()?>
-
-<h3><?=$clienteB->nome?></h3>
-
-<pre><?=var_dump($clienteA,$clienteB)?></pre>
-    
+<pre><?=var_dump($ClienteA, $ClienteB )?></pre>
 </body>
 </html>
