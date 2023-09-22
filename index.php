@@ -14,6 +14,7 @@
         <li>Acesso as propriedades</li>
         <li>Atribuição e leitura de dados</li>
         <li>Chamada de método</li>
+        <li>Uso do <code> this</code> para acessar recursos dentro da propria classe</li>
     </ul>
 
 <?php require_once "src/Cliente.php";
@@ -30,11 +31,28 @@ $clienteA->email = "hannah@email.com";
 $clienteA->senha = password_hash("123abc", PASSWORD_DEFAULT);
 
 
-//Exibição
+
 ?>
 <hr>
 <h2>Dados do objeto(acesso e leitura)</h2>
 <h3><?=$clienteA->nome?></h3>
+<h3><?=$clienteA->email?></h3>
+
+<!-- Telefones -->
+<h3><?=$clienteA->telefones[1]?></h3>
+<h3><?=$clienteA->telefones[0]?></h3> 
+<!-- ou -->
+<h3><?=implode(", ", $clienteA->telefones)?></h3>
+<!-- ou -->
+<ul>
+    <?php foreach($clienteA->telefones as $telefone){?>        
+            <li><?=$telefone?></li>
+    <?php } ?>
+</ul>
+
+<h2>acessando os dados atraves de um método</h2>
+<?=$clienteA->exibirDados()?>
+
 <h3><?=$clienteB->nome?></h3>
 
 <pre><?=var_dump($clienteA,$clienteB)?></pre>
