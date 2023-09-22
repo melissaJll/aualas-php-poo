@@ -19,9 +19,15 @@
 $ClienteA = new Cliente;
 //Usando setter para definir nome
 $ClienteA->setNome("Ana");
+$ClienteA->setEmail("ana@email.com");
+$ClienteA->setSenha("abc123");
+
+
 
 ?>
-<p><?= $ClienteA->getNome() ?></p>
+<p>Nome: <?= $ClienteA->getNome() ?></p>
+<p>Email: <?= $ClienteA->getEmail() ?></p>
+<p>Senha: <?= $ClienteA->getsenha() ?></p>
 <pre><?=var_dump($ClienteA)?></pre>
 
 </body>
