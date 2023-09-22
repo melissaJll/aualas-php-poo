@@ -19,7 +19,9 @@
 $ClienteA = new Cliente;
 //Usando setter para definir nome
 $ClienteA->setNome("Ana");
+
 ?>
+<p><?= $ClienteA->getNome() ?></p>
 <pre><?=var_dump($ClienteA)?></pre>
 
 </body>

@@ -9,5 +9,9 @@ class Cliente{
         $this->nome = $nome;
     }
 
+    public function getNome(){
+        return $this->nome;
+    }
+
 }
 
