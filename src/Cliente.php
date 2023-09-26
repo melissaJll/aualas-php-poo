@@ -3,6 +3,13 @@ class Cliente{
     private string $nome;
     private string $email;
     private string $senha; 
+    private string $situacao = "a definir"; 
+
+
+    //Construtor
+    public function __construct(){
+
+    }
 
     //getters/  setters
     public function setNome(string $nome):void{
@@ -30,5 +37,17 @@ class Cliente{
         return $this->senha;
     }
 
+
+    //Visibilidade protected
+    //usado na classe pai e sub-classes
+    protected function getSituacao(): string
+    {
+        return $this->situacao;
+    }
+
+    protected function setSituacao(string $situacao): void
+    {
+        $this->situacao = $situacao;
+    }
 }
 
