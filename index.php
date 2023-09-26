@@ -14,8 +14,8 @@
         <li>Herança</li>
         <li>Super classe e Sub classe</li>
         <li>Métodos/Atributos protegidos(acessivel na mesma classe e sub)</li>
-        <li>Classe abstrata</li>
-        <li>Classe final</li>
+        <li>Classe abstrata: não permite a instancia de um objeto</li>
+        <li>Classe final: não permite a criação de sub-classes a partir da mesma</li>
     </ul>
 
     <hr>
@@ -47,6 +47,19 @@ $ClientePJ->setNomeFantasia("BA Informática");
 ?>
 <pre><?=var_dump($ClientePJ)?></pre>
 
+<hr>
+
+<?php
+require_once "src/MEI.php";
+$ClienteMei = new MEI;
+$ClienteMei->setNome("Marina");
+$ClienteMei->setAnoFundacao(2023);
+$ClienteMei->setNomeFantasia("Tanaka avicultura");
+$ClienteMei->setAreaAtuacao("Avicultura");
+
+?>
+
+<pre><?=var_dump($ClienteMei)?></pre>
 <hr>
 
 <?php
