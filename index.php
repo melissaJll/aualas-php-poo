@@ -14,6 +14,8 @@
         <li>Herança</li>
         <li>Super classe e Sub classe</li>
         <li>Métodos/Atributos protegidos(acessivel na mesma classe e sub)</li>
+        <li>Classe abstrata</li>
+        <li>Classe final</li>
     </ul>
 
     <hr>
@@ -42,8 +44,16 @@ $ClientePJ->setEmail("belt@email.com");
 $ClientePJ->setAnoFundacao(2000);
 $ClientePJ->setCnpj("32.088.0001/000.41");
 $ClientePJ->setNomeFantasia("BA Informática");
-
 ?>
 <pre><?=var_dump($ClientePJ)?></pre>
+
+<hr>
+
+<?php
+require_once "src/Cliente.php";
+$ClienteGenerico = new Cliente;
+?>
+<pre><?=var_dump($ClienteGenerico)?></pre>
+
 </body>
 </html>

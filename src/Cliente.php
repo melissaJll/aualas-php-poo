@@ -1,5 +1,6 @@
 <?php
-class Cliente{
+abstract class Cliente{
+//Não é possivel instanciar esta classe. É usada apenas como modelo(pai) para sub-classe herdarem 
     private string $nome;
     private string $email;
     private string $senha; 
