@@ -9,14 +9,11 @@ class PessoaJuridica extends Cliente{
         $this->setSituacao("Em análise"); // setter protegido existente em cliente
     }
     
-
     public function exibirDados(): void
     {
-        echo "<h3>Método exibirDados() - Classe PessoaJuridica</h3>";
-        echo "<h4>{$this->getNome()}</h4>";//o atributo nome não pertence a esta classe. Na classe Cliente nome é um atributo privado
-
-        echo "<p>Situação: {$this->getSituacao()} </p>";
-        echo "<p>Nome fantasia $this->nomeFantasia</p>";
+        //Permite acesso aos recursos da classe pai
+        parent::exibirDados();
+        echo "<p> Nome fantasia: $this->nomeFantasia</p>";
     }
 
 
