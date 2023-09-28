@@ -7,6 +7,14 @@ abstract class Cliente{
     private string $situacao = "a definir"; 
 
 
+    public function exibirDados(){
+        echo "<h3>Método exibirDados() - Classe Cliente</h3>";
+        echo "<h4>$this->nome</h4>";
+        //echo "<h4>{$this->getNome()}</h4>";
+
+        echo "<p>Situação: $this->situacao </p>";
+    }
+
     //Construtor
     public function __construct(){
 

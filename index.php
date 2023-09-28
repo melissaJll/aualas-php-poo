@@ -6,16 +6,13 @@
     <title>Exemplo 4 </title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 4</h1>
+    <h1>PHP com POO - Exemplo 6</h1>
     <hr>
 
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Herança</li>
-        <li>Super classe e Sub classe</li>
-        <li>Métodos/Atributos protegidos(acessivel na mesma classe e sub)</li>
-        <li>Classe abstrata: não permite a instancia de um objeto</li>
-        <li>Classe final: não permite a criação de sub-classes a partir da mesma</li>
+        <li>Polimorfismo</li>
+
     </ul>
 
     <hr>
@@ -29,11 +26,12 @@ $ClientePF->setNome("Nina");
 $ClientePF->setEmail("nina@email.com");
 $ClientePF->setIdade(15);
 $ClientePF->setCpf("325.132.579-00");
+$ClientePF->exibirDados();
 ?>
 
 <pre><?=var_dump($ClientePF)?></pre>
-<hr>
-<h3>Pessoa Jurídica</h3>
+    <hr>
+    <h3>Pessoa Jurídica</h3>
 
 <?php
 require_once "src/pessoaJuridica.php";
@@ -44,29 +42,20 @@ $ClientePJ->setEmail("belt@email.com");
 $ClientePJ->setAnoFundacao(2000);
 $ClientePJ->setCnpj("32.088.0001/000.41");
 $ClientePJ->setNomeFantasia("BA Informática");
+$ClientePJ->exibirDados();
 ?>
 <pre><?=var_dump($ClientePJ)?></pre>
 
 <hr>
 
-<?php
-require_once "src/MEI.php";
-$ClienteMei = new MEI;
-$ClienteMei->setNome("Marina");
-$ClienteMei->setAnoFundacao(2023);
-$ClienteMei->setNomeFantasia("Tanaka avicultura");
-$ClienteMei->setAreaAtuacao("Avicultura");
+<h2>Saída de dados</h2>
+<section>
+    <?=$ClientePF->exibirDados()?>
+</section>
+<section>
+    <?=$ClientePJ->exibirDados()?>
+</section>
 
-?>
-
-<pre><?=var_dump($ClienteMei)?></pre>
-<hr>
-
-<?php
-require_once "src/Cliente.php";
-$ClienteGenerico = new Cliente;
-?>
-<pre><?=var_dump($ClienteGenerico)?></pre>
 
 </body>
 </html>
