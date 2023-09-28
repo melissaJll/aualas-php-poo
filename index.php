@@ -12,49 +12,35 @@
     <h2>Assuntos abordados:</h2>
     <ul>
         <li>Polimorfismo</li>
-        <li>Sobreposição de métodos</li>
-        <li>Uso do <code>parent::</code> para acessar superClasse</li>
+        <li>Acesso direto sem a necessidade de instanciar</li>
+        <li>Uso do <code>self::</code> para acessar (dentro da classe) os atributo estáticos</li>
     </ul>
 
-    <hr>
-    <h3>Pessoa Fisica</h3>
-
 <?php
-require_once "src/pessoaFisica.php";
-$ClientePF = new PessoaFisica;
-//$ClientePF->setNome("PF");
-$ClientePF->setNome("Nina");
-$ClientePF->setEmail("nina@email.com");
-$ClientePF->setIdade(15);
-$ClientePF->setCpf("325.132.579-00");
-$ClientePF->exibirDados();
+require_once "src/PessoaFisica.php";
+$cliente1 = new PessoaFisica;
+$cliente1->setNome("Marcio");
+$cliente1->setIdade(65);
+
+$cliente2 = new PessoaFisica;
+$cliente2->setNome("Icaro");
+$cliente2->setIdade(24);
+
+require_once "src/Utilitarios.php";
+//Chamada de método sem intancia da classe
+Utilitarios::obterData();
+
 ?>
+<h2>Atendimento do dia
+<?=Utilitarios::$dataAtual?></h2>
 
-<pre><?=var_dump($ClientePF)?></pre>
-    <hr>
-    <h3>Pessoa Jurídica</h3>
+<h3>Cliente: <?=$cliente1->getNome()?></h3>
+<p>Idade: <?=$cliente1->getIdade()?></p>
+<p>Atendimento: <?=Utilitarios::definirAtendimento($cliente1->getIdade())?></p>
 
-<?php
-require_once "src/pessoaJuridica.php";
-$ClientePJ = new PessoaJuridica;
-
-$ClientePJ->setNome("Beltrano S/A");
-$ClientePJ->setEmail("belt@email.com");
-$ClientePJ->setAnoFundacao(2000);
-$ClientePJ->setCnpj("32.088.0001/000.41");
-$ClientePJ->setNomeFantasia("BA Informática");
-?>
-<pre><?=var_dump($ClientePJ)?></pre>
-
-<hr>
-
-<h2>Saída de dados</h2>
-<section>
-    <?=$ClientePF->exibirDados()?>
-</section>
-<section>
-    <?=$ClientePJ->exibirDados()?>
-</section>
+<h3>Cliente: <?=$cliente2->getNome()?></h3>
+<p>Idade: <?=$cliente2->getIdade()?></p>
+<p>Atendimento: <?=Utilitarios::definirAtendimento($cliente2->getIdade())?></p>
 
 
 </body>
