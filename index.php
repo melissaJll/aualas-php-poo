@@ -42,7 +42,6 @@ $ClientePJ->setEmail("belt@email.com");
 $ClientePJ->setAnoFundacao(2000);
 $ClientePJ->setCnpj("32.088.0001/000.41");
 $ClientePJ->setNomeFantasia("BA Informática");
-$ClientePJ->exibirDados();
 ?>
 <pre><?=var_dump($ClientePJ)?></pre>
 

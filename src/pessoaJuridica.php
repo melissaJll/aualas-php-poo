@@ -10,6 +10,15 @@ class PessoaJuridica extends Cliente{
     }
     
 
+    public function exibirDados(): void
+    {
+        echo "<h3>Método exibirDados() - Classe PessoaJuridica</h3>";
+        echo "<h4>{$this->getNome()}</h4>";//o atributo nome não pertence a esta classe. Na classe Cliente nome é um atributo privado
+
+        echo "<p>Situação: {$this->getSituacao()} </p>";
+        echo "<p>Nome fantasia $this->nomeFantasia</p>";
+    }
+
 
     public function setAnoFundacao(int $anoFundacao): void
     {
