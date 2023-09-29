@@ -11,9 +11,9 @@
 
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Polimorfismo</li>
-        <li>Acesso direto sem a necessidade de instanciar</li>
-        <li>Uso do <code>self::</code> para acessar (dentro da classe) os atributo estáticos</li>
+        <li>Namespaces: agrupamento e organização de recursos (classes, funções, constantes)</li>
+        <li>Prevenção de conflitos entre classes de mesmo nome</li>
+        <li>Configurar e usar <code>namespaces</code> e <code>alias</code></li>
     </ul>
 
 <?php
@@ -21,6 +21,13 @@
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
 
+//Forma 1 de como usar classes com namespaces
+$pagamentoFornecedor = new Fornecedor\Pagamento;
+$pagamentoPrestador = new Prestador\Pagamento; //namespace\classe
+
 ?>
+
+<pre><?=var_dump($pagamentoFornecedor)?></pre>
+<pre><?=var_dump($pagamentoPrestador)?></pre>
 </body>
 </html>
