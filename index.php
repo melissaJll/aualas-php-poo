@@ -26,7 +26,7 @@ use Tabajara\PessoaFisica;
 use Tabajara\PessoaJuridica;*/
 
 //Lista de Use
-use Tabajara\{MEI, PessoaFisica , PessoaJuridica};
+use Tabajara\{MEI , PessoaFisica as PF , PessoaJuridica as PJ};
 
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
@@ -53,8 +53,8 @@ namespace\classe */
  $pagamentoFornecedor = new Pagamento;
 $pagamentoPrestador = new PrestadorPagamento;
 
-$clientePF = new PessoaFisica;
-$clientePJ = new PessoaJuridica;
+$clientePF = new PF;
+$clientePJ = new PJ;
 $clienteMEI = new MEI;
 
 $clientePF->setNome("Tales");
