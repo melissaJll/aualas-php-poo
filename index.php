@@ -21,9 +21,12 @@
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
-use Tabajara\MEI;
+/*use Tabajara\MEI;
 use Tabajara\PessoaFisica;
-use Tabajara\PessoaJuridica;
+use Tabajara\PessoaJuridica;*/
+
+//Lista de Use
+use Tabajara\{MEI, PessoaFisica , PessoaJuridica};
 
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
