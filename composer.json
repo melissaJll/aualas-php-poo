@@ -1,0 +1,9 @@
+{
+    "name": "melissa/aualas-php-poo",
+    "description": "exemplo de projeto PHP com Orientação a objetos",
+    "autoload":{
+        "psr-4": {
+            "Tabajara\\": "src/"
+        }
+    }
+}
