@@ -18,6 +18,10 @@
 
 <?php
 //só fazer o require já dá erro no servidpr devido a terem o mesmo nome
+
+use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento;
+
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
 
@@ -27,10 +31,15 @@ require_once "src/prestadores/Pagamento.php";
 //namespace\classe
 
 //Forma 2 de como usar classes com namespaces
-use Fornecedor\Pagamento;
-use Prestador\Pagamento as  PrestadorPagamento;
+// use Fornecedor\Pagamento;
+// use Prestador\Pagamento as  PrestadorPagamento;
+// $pagamentoFornecedor = new Pagamento;
+// $pagamentoPrestador = new PrestadorPagamento; 
+//chama alias ao inves da classe Pagamento
+
 $pagamentoFornecedor = new Pagamento;
-$pagamentoPrestador = new PrestadorPagamento; //chama alias ao inves da classe Pagamento
+$pagamentoPrestador = new PrestadorPagamento;
+
 
 ?>
 
