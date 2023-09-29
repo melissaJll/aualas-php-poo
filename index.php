@@ -19,9 +19,10 @@
 <?php
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
-use Tabajara\{MEI , PessoaFisica as PF , PessoaJuridica as PJ};
+use Tabajara\{Escola, MEI , PessoaFisica as PF , PessoaJuridica as PJ};
 
 require_once "vendor/autoload.php";
+//rodar dump-autoload quando acrescentar novo namespace
 
 $pagamentoFornecedor = new Pagamento;
 $pagamentoPrestador = new PrestadorPagamento;
@@ -63,6 +64,13 @@ $clienteMEI->setAreaAtuacao("Artesanato");
     <li>Nome : <?=$clienteMEI->getNome()?></li>
     <li>Area de Atuacao: <?=$clienteMEI->getAreaAtuacao()?></li>
 </ul>
+
+<hr>
+
+<?php
+$escola = new Escola;
+var_dump($escola);
+?>
 
 </body>
 </html>
