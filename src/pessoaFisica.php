@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Tabajara;
 require_once "Cliente.php";
 final class PessoaFisica extends Cliente{
     private int $idade;
