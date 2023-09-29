@@ -17,31 +17,10 @@
     </ul>
 
 <?php
-require_once "src/PessoaFisica.php";
-$cliente1 = new PessoaFisica;
-$cliente1->setNome("Marcio");
-$cliente1->setIdade(65);
-
-$cliente2 = new PessoaFisica;
-$cliente2->setNome("Icaro");
-$cliente2->setIdade(24);
-
-require_once "src/Utilitarios.php";
-//Chamada de método sem intancia da classe
-Utilitarios::obterData();
+//só fazer o require já dá erro no servidpr devido a terem o mesmo nome
+require_once "src/fornecedores/Pagamento.php";
+require_once "src/prestadores/Pagamento.php";
 
 ?>
-<h2>Atendimento do dia
-<?=Utilitarios::$dataAtual?></h2>
-
-<h3>Cliente: <?=$cliente1->getNome()?></h3>
-<p>Idade: <?=$cliente1->getIdade()?></p>
-<p>Atendimento: <?=Utilitarios::definirAtendimento($cliente1->getIdade())?></p>
-
-<h3>Cliente: <?=$cliente2->getNome()?></h3>
-<p>Idade: <?=$cliente2->getIdade()?></p>
-<p>Atendimento: <?=Utilitarios::definirAtendimento($cliente2->getIdade())?></p>
-
-
 </body>
 </html>
