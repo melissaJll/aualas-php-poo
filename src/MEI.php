@@ -1,6 +1,6 @@
 <?php
 namespace Tabajara;
-require_once "PessoaJuridica.php";
+
 final class MEI extends PessoaJuridica{
 // 'final' é a última classe de sua geração, não permite criar sub-classes a partir desta
     private string $areaAtuacao;

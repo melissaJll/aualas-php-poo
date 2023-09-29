@@ -3,7 +3,9 @@
     "description": "exemplo de projeto PHP com Orientação a objetos",
     "autoload":{
         "psr-4": {
-            "Tabajara\\": "src/"
+            "Tabajara\\": "src/",
+            "Fornecedor\\": "src/fornecedores",
+            "Prestador\\": "src/prestadores"
         }
     }
 }
