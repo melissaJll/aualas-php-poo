@@ -22,7 +22,10 @@ use Prestador\Pagamento as PrestadorPagamento;
 use Tabajara\{Escola, MEI , PessoaFisica as PF , PessoaJuridica as PJ};
 
 require_once "vendor/autoload.php";
+//criar composer.json
+//https://getcomposer.org/doc/01-basic-usage.md
 //rodar dump-autoload quando acrescentar novo namespace
+//fazer require_once "vendor/autoload.php";
 
 $pagamentoFornecedor = new Pagamento;
 $pagamentoPrestador = new PrestadorPagamento;
